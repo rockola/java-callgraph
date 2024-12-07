@@ -11,37 +11,38 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>23</java.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.apache.bcel</groupId>
       <artifactId>bcel</artifactId>
-      <version>6.2</version>
+      <version>6.10.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>javassist</groupId>
+      <groupId>org.javassist</groupId>
       <artifactId>javassist</artifactId>
-      <version>3.12.1.GA</version>
+      <version>3.30.2-GA</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
         <groupId>io.cucumber</groupId>
         <artifactId>cucumber-java</artifactId>
-        <version>2.3.1</version>
+        <version>7.20.1</version>
         <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>io.cucumber</groupId>
         <artifactId>cucumber-junit</artifactId>
-        <version>2.3.1</version>
+        <version>7.20.1</version>
         <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
-        <version>4.12</version>
+        <version>4.13.2</version>
         <scope>test</scope>
     </dependency>
   </dependencies>
@@ -50,7 +51,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>3.7.1</version>
         <configuration>
           <descriptors>
             <descriptor>assembly-dyn.xml</descriptor>
@@ -76,11 +77,13 @@
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.6.1</version>
+        <version>3.13.0</version>
         <configuration>
-          <optimize>false</optimize>
-          <source>1.8</source>
-          <target>1.8</target>
+          <!-- <optimize>false</optimize> -->
+	  <!--
+          <release>1.23</release>
+          <target>1.23</target>
+	  -->
         </configuration>
       </plugin>
     </plugins>
